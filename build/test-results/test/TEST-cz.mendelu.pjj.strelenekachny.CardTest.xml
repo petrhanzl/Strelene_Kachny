@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.mendelu.pjj.strelenekachny.CardTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-01T18:42:35" hostname="user-MacBook-Pro.local" time="0.036">
+  <properties/>
+  <testcase name="createCards()" classname="cz.mendelu.pjj.strelenekachny.CardTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

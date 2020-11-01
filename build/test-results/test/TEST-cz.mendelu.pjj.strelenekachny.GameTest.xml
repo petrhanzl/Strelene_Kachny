@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cz.mendelu.pjj.strelenekachny.GameTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-11-01T18:42:35" hostname="user-MacBook-Pro.local" time="0.038">
+  <properties/>
+  <testcase name="newGame_duplcity()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.002"/>
+  <testcase name="shufflePackage()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.006"/>
+  <testcase name="newGame()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

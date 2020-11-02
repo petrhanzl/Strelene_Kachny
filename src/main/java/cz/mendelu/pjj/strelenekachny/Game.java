@@ -1,7 +1,5 @@
 package cz.mendelu.pjj.strelenekachny;
 
-import com.sun.javadoc.SeeTag;
-
 import java.util.*;
 
 public class Game {
@@ -15,7 +13,7 @@ public class Game {
      * Metoda vytvori hru jako takovou a odstartuje ji. Dale take vytvori hrace s prislusnymi
      * barvami a take rybnicek, rozda karty a rozestavi kachny na rybnicku.
      * @author xhanzl1
-     * @version etapa 1
+     * @version etapa 3
      *
      */
     public static Game newGame(){
@@ -26,16 +24,20 @@ public class Game {
         throw new UnsupportedOperationException("Not Implemented Yet");
     }
 
-
-
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     public List<Card> getCardsInPackage() {
         return Collections.unmodifiableList(cardsInPackage);
+
     }
 
     /**
      * Metoda vytvori vsechny hraci karty
      * @author xhanzl1
-     * @version etapa 1
+     * @version etapa 3
      *
      */
     public List<Card> createCards(){
@@ -45,6 +47,7 @@ public class Game {
             Cards.add(card);
         }
         cardsInPackage = Cards;
+        Collections.shuffle(cardsInPackage);
         return Cards;
     }
 
@@ -56,8 +59,14 @@ public class Game {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
-    public void fillPond(){
-        throw new UnsupportedOperationException("Not implemented yet");
+    public void fillPond(Pond pond){
+        for (Player player : players.keySet()) {
+            for (int i = 0; i < 5; i++) {
+                var duck = new Duck(player.getColor(), player);
+                pond.addDucksToPond(duck);
+            }
+        }
+        pond.shuffleDucksInPackage();
     }
 
 

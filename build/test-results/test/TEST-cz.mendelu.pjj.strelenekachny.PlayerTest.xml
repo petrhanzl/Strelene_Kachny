@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cz.mendelu.pjj.strelenekachny.PlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-01T18:42:35" hostname="user-MacBook-Pro.local" time="0.014">
+<testsuite name="cz.mendelu.pjj.strelenekachny.PlayerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-02T17:46:25" hostname="DESKTOP-QQP8002" time="0.004">
   <properties/>
-  <testcase name="useCard()" classname="cz.mendelu.pjj.strelenekachny.PlayerTest" time="0.014"/>
+  <testcase name="useCard()" classname="cz.mendelu.pjj.strelenekachny.PlayerTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

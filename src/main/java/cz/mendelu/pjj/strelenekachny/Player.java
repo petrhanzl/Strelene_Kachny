@@ -1,9 +1,6 @@
 package cz.mendelu.pjj.strelenekachny;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Player {
     private Color color;
@@ -13,12 +10,18 @@ public class Player {
 
     public Player(Color color, Card ... cards){
         this.color = color;
-        this.numberOfDucksLeft = 6;
+        this.numberOfDucksLeft = 5;
         this.cardsInHand = new ArrayList<>();
         cardsInHand.addAll(Arrays.asList(cards));
 
     }
 
+
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     public void drawNewCards(Card ... cards) {
         cardsInHand.addAll(Arrays.asList(cards));
     }
@@ -35,23 +38,52 @@ public class Player {
         cardsInHand.remove(cardPosition);
     }
 
-
+    public Color getColor() {
+        return color;
+    }
 
     public void setCardsInHand(List<Card> cardsInHand) {
         this.cardsInHand = cardsInHand;
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     public List<Card> getCards(){
         return Collections.unmodifiableList(cardsInHand);
     }
 
     public int getNumberOfDucksLeft(){
-        return this.numberOfDucksLeft;
+        return numberOfDucksLeft;
     }
 
-    public void removeDuck(Duck duck){
-        throw new UnsupportedOperationException("Not Implemented Yet");
+    public void removeDuck(){
+        numberOfDucksLeft -= 1;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return numberOfDucksLeft == player.numberOfDucksLeft &&
+                color == player.color &&
+                Objects.equals(cardsInHand, player.cardsInHand);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, cardsInHand, numberOfDucksLeft);
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "color=" + color +
+                ", cardsInHand=" + cardsInHand +
+                ", numberOfDucksLeft=" + numberOfDucksLeft +
+                '}';
+    }
 }

@@ -22,7 +22,6 @@ class CardTest {
         //creating temporary set in order to check if first and last card in package exist
         List<Card> tmp = game.getCardsInPackage();
         //then
-
         Assertions.assertNotNull(tmp.toArray()[0]);
         Assertions.assertNotNull(tmp.toArray()[51]);
     }

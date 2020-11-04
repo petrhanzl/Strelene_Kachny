@@ -63,6 +63,11 @@ public class Player {
         numberOfDucksLeft -= 1;
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,11 +78,21 @@ public class Player {
                 Objects.equals(cardsInHand, player.cardsInHand);
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     @Override
     public int hashCode() {
         return Objects.hash(color, cardsInHand, numberOfDucksLeft);
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     @Override
     public String toString() {
         return "Player{" +

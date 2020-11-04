@@ -26,6 +26,11 @@ public class Duck {
         return owner;
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -36,6 +41,11 @@ public class Duck {
                 color == duck.color;
     }
 
+    /**
+     * @author xhanzl1
+     * @version etapa 3
+     *
+     */
     @Override
     public int hashCode() {
         return Objects.hash(owner, color, aimedAt);

@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  * Trida po kliknuti na image Rules otevre pravidla ze slozky file
@@ -29,12 +31,15 @@ public class RulesActor extends Actor {
     public void act() {
         super.act();
         if (Greenfoot.mouseClicked(this)){
-            File file = new File( "Files" + File.separator + "rules.pdf");
             try {
-                Desktop.getDesktop().open(file);
-            } catch (IOException e) {
+                Desktop desktop = java.awt.Desktop.getDesktop();
+                URI oURL = new URI("https://www.docdroid.net/JZ9Lzw5/rules-pdf");
+                desktop.browse(oURL);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
+
+
         }
 
     }

@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Pond {
     private List<Duck> ducksInPackage;
-    private List<Duck> ducksOnPond; //Stack !!!
+    private List<Duck> ducksOnPond; //TODO Stack !!!
     private int currentFirstDuck = 0;
 
     public Pond() {
@@ -49,8 +49,8 @@ public class Pond {
     }
 
 
-    public void Aim(Duck duck){
-        duck.setAimedAt(false);
+    public void changeAim(int index){
+        ducksOnPond.get(index).setAimedAt();
     }
 
     /**

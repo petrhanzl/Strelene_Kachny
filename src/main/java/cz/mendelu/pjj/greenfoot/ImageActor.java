@@ -3,6 +3,12 @@ package cz.mendelu.pjj.greenfoot;
 import greenfoot.Actor;
 import greenfoot.GreenfootImage;
 
+/**
+ * Trida na zobrazovani obrazku ve hre
+ * @author xhanzl1
+ * @version etapa 4
+ *
+ */
 public class ImageActor extends Actor {
     private int width;
     private int height;

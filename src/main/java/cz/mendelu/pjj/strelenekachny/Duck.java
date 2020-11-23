@@ -19,8 +19,8 @@ public class Duck {
         return aimedAt;
     }
 
-    public void setAimedAt(boolean aimedAt){
-        this.aimedAt = aimedAt;
+    public void setAimedAt(){
+        this.aimedAt = !this.aimedAt;
     }
     public Player getOwner() {
         return owner;

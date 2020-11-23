@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cz.mendelu.pjj.strelenekachny.PondTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-11-02T17:46:25" hostname="DESKTOP-QQP8002" time="0.003">
+<testsuite name="cz.mendelu.pjj.strelenekachny.PondTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2020-11-23T10:49:01" hostname="DESKTOP-QQP8002" time="0.002">
   <properties/>
-  <testcase name="killDuck()" classname="cz.mendelu.pjj.strelenekachny.PondTest" time="0.002"/>
-  <testcase name="moveDucks()" classname="cz.mendelu.pjj.strelenekachny.PondTest" time="0.001"/>
+  <testcase name="killDuck()" classname="cz.mendelu.pjj.strelenekachny.PondTest" time="0.001"/>
+  <testcase name="moveDucks()" classname="cz.mendelu.pjj.strelenekachny.PondTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

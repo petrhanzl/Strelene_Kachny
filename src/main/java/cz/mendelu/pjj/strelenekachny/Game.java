@@ -62,7 +62,7 @@ public class Game {
     public void fillPond(Pond pond){
         for (Player player : players.keySet()) {
             for (int i = 0; i < 5; i++) {
-                var duck = new Duck(player.getColor(), player);
+                Duck duck = new Duck(player.getColor(), player);
                 pond.addDucksToPond(duck);
             }
         }

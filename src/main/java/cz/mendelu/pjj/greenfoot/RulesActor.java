@@ -3,11 +3,19 @@ package cz.mendelu.pjj.greenfoot;
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Trida po kliknuti na image Rules otevre pravidla ze slozky file
+ * @author xhanzl1
+ * @version etapa 4
+ *
+ */
 public class RulesActor extends Actor {
+
     RulesActor(){
         update();
     }
@@ -16,17 +24,12 @@ public class RulesActor extends Actor {
         getImage().scale(150, 50);
     }
 
-    /**
-     * Metoda po kliknuti na image Rules otevre pravidla ze slozky file
-     * @author xhanzl1
-     * @version etapa 4
-     *
-     */
+
     @Override
     public void act() {
         super.act();
         if (Greenfoot.mouseClicked(this)){
-            File file = new File("/Users/Petr/Projects/Java/PJJ/Strelene_Kachny/src/main/resources/Files/rules.pdf");
+            File file = new File( "Files" + File.separator + "rules.pdf");
             try {
                 Desktop.getDesktop().open(file);
             } catch (IOException e) {

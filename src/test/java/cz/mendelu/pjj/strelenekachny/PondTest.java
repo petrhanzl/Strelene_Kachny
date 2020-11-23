@@ -53,7 +53,7 @@ class PondTest {
         Pond pond = new Pond();
         Duck duck0 = new Duck(Color.BLUE, player);
         pond.addDucksToPond(duck0);
-        duck0.setAimedAt(true);
+        duck0.setAimedAt();
 
         //when
         pond.killDuck(0);

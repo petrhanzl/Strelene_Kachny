@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cz.mendelu.pjj.strelenekachny.GameTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-11-02T17:46:25" hostname="DESKTOP-QQP8002" time="0.006">
+<testsuite name="cz.mendelu.pjj.strelenekachny.GameTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-11-23T10:49:01" hostname="DESKTOP-QQP8002" time="0.007">
   <properties/>
-  <testcase name="newGame_duplcity()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.001"/>
+  <testcase name="newGame_duplcity()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.004"/>
   <testcase name="shufflePackage()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.002"/>
   <testcase name="newGame()" classname="cz.mendelu.pjj.strelenekachny.GameTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

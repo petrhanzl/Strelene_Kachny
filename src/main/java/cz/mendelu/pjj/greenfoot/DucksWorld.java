@@ -1,30 +1,57 @@
 package cz.mendelu.pjj.greenfoot;
 
-import cz.mendelu.pjj.strelenekachny.Duck;
+
+import cz.mendelu.pjj.strelenekachny.Color;
 import cz.mendelu.pjj.strelenekachny.Pond;
-import greenfoot.GreenfootImage;
 import greenfoot.World;
 
+
+/**
+ * World samotne hry a rybnicku
+ * @author xhanzl1
+ * @version etapa 4
+ *
+ */
 public class DucksWorld extends World {
 
-    public void NewGameWorld(){
-        ImageActor sign = new ImageActor("Images/strelene_kachny.jpg", 565, 90);
-        addObject(sign, 600, 100);
-
-        ImageActor ducksPicture = new ImageActor("Images/ducks.jpg", 255, 335);
-        addObject(ducksPicture, 600, 400);
-
-        addObject(new NewGameActor(), 200, 600);
-        addObject(new RulesActor(), 1000, 600);
-    }
-
-    public void PondWorld(){
-
-    }
 
     public DucksWorld(){
-        super(1200, 700, 1);
+        super(1500, 1000, 1);
         setBackground("Images/background.jpg");
-        NewGameWorld();
+
+        final int sightX = 120;
+        final int sightY = 130;
+        final int sightWidth = 111;
+        //vytvareni obrazku oblohy
+        addObject(new ImageActor("Images/sky.png", 180, 100), 140, sightY + 180);
+        addObject(new ImageActor("Images/sky.png", 180, 100), sightWidth + 250, sightY + 180);
+        addObject(new ImageActor("Images/sky.png", 180, 100), 2*sightWidth + 380, sightY + 180);
+        addObject(new ImageActor("Images/sky.png", 180, 100), 3*sightWidth + 500, sightY + 180);
+        addObject(new ImageActor("Images/sky.png", 180, 100), 4*sightWidth + 620, sightY + 180);
+        addObject(new ImageActor("Images/sky.png", 180, 100), 5*sightWidth + 740, sightY + 180);
+
+        //vytvareni zamerovacu
+        SightActor s1 = new SightActor();
+        addObject(s1, sightX+30, sightY);
+        addObject(new SightActor(), sightX + sightWidth + 150, sightY);
+        addObject(new SightActor(), sightX + 2*sightWidth + 270, sightY);
+        addObject(new SightActor(), sightX + 3*sightWidth + 390, sightY);
+        addObject(new SightActor(), sightX + 4*sightWidth + 510, sightY);
+        addObject(new SightActor(), sightX + 5*sightWidth + 630, sightY);
+
+        //vytvareni kachen
+        addObject(new DuckActor(Color.BLUE), sightX+30, 500);
+        addObject(new DuckActor(Color.BLANK), sightWidth + 250, 500);
+        addObject(new DuckActor(Color.YELLOW), 2*sightWidth + 380, 500);
+        addObject(new DuckActor(Color.GREEN), 3*sightWidth + 500, 500);
+        addObject(new DuckActor(Color.BLUE), 4*sightWidth + 620, 500);
+        addObject(new DuckActor(Color.ORANGE), 5*sightWidth + 740, 500);
+
+
+
+        addObject(new ImageActor("Images/duck_pack.png", 100, 180), 1450, 500);
+
     }
+
+
 }

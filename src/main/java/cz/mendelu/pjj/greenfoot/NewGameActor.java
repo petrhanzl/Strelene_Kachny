@@ -1,9 +1,17 @@
 package cz.mendelu.pjj.greenfoot;
 
+import cz.mendelu.pjj.strelenekachny.Game;
+import cz.mendelu.pjj.strelenekachny.Pond;
 import greenfoot.Actor;
 import greenfoot.Greenfoot;
 import java.util.List;
 
+/**
+ * Trida po kliknuti na image New Game zacne novou hru
+ * @author xhanzl1
+ * @version etapa 4
+ *
+ */
 public class NewGameActor extends Actor {
     public NewGameActor(){
         this.update();
@@ -18,8 +26,11 @@ public class NewGameActor extends Actor {
     public void act() {
         super.act();
         if (Greenfoot.mouseClicked(this)){
-            List objects = getWorld().getObjects(null);
-            getWorld().removeObjects(objects);
+            Game game = new Game();
+            //Pond pond = new Pond();
+            //game.fillPond(pond);
+            DucksWorld world = new DucksWorld();
+            Greenfoot.setWorld(world);
         }
     }
 }
